@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>Freact</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            .judul{
+                padding-top: 20px;
+                padding-bottom: 20px;
+                background-color : rgb(0, 65, 130);
+            }
+            .judul h1{
+                margin-top: 0px;
+                margin-bottom: 10px;
+                opacity: 0.9;
+                font-size: 50px;
+                letter-spacing: 4px;
+                color: rgb(245, 159, 54);
+            }
+            .kiri{
+                width:30%;
+                float:left;
+            }
+            .home{
+                margin-left: 20px;
+                cursor: pointer;
+            }
+            .tit{
+                margin-left:515px;
+                font-family: Coolvetica, Helvetica, sans-serif;
+            }
+            .konten{
+                background-color: rgb(36, 133, 212);
+                padding: 340px 250px 74px 250px;
+                height:135px;
+            }
+            .konten .data{
+                margin-top: -280px;
+                margin-left: -240px;
+                font-size: 24pt;
+                color: rgb(199, 193, 186);
+                padding: 80px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                display:block;
+                width: 1180px;
+                text-align: center;
+            }
+            .rafif{
+                display: inline-block;
+            }
+            .husna{
+                display:inline-block;
+            }
+            .jaysyu{
+                display: inline-block;
+            }
+            .rafly{
+                display: inline-block;
+            }
+            .evelyn{
+                display: inline-block;
+            }
+            p{
+                padding-top: 10px;
+                padding-right: 30px;
+                font-size: 16pt;
+                text-align: center;
+            }
+            .job{
+                font-size:14pt;
+                padding-bottom: 10px;
+            }
+            .rafif .foto{
+                display:flex;
+                border-radius: 50px;
+                margin-left: 28px;
+            }
+            .husna .foto{
+                display:flex;
+                border-radius: 50px;
+                margin-left: 40px;
+            }
+            .rafly .foto{
+                display:flex;
+                border-radius: 50px;
+                margin-left: 18px;
+            }
+            .evelyn .foto{
+                display:flex;
+                border-radius: 50px;
+                margin-left: 40px;
+            }
+            .jaysyu .foto{
+                display:flex;
+                border-radius: 50px;
+                margin-left: 30px;
+            }
+            .data a{
+                font-size: 12pt;
+                text-align: center;
+                color: blue;
+                margin-left: -30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="judul">
+            <div class="kiri">
+                <img class="home" src="/static/img/home (2).png" width="50px" height="50px" onclick="window.location.href='/';"/>
+            </div>
+            <div class="title">
+                <h1 class = "tit">Contact Us</h1>
+            </div>
+        </div>
+        <div class="konten">
+            <div class="data">
+                <div class="rafif">
+                    <img class = "foto" src="/static/img_check/foto_sendiri.jpeg" width="100px" height="100px"/>
+                    <p>Achmad Rafif Nst<br/><p class = "job">AI Engineer</p><a class="linkedin" href="https://www.linkedin.com/in/achmad-rafif-nst-35882b20a/">LinkedIn</a></p>
+                </div>
+                <div class="husna">
+                    <img src="/static/img_check/poto una.jpg" class="foto" width="100px" height="100px">
+                    <p>Husna Zahidah Slawat<br/><p class = "job">Frontend Engineer</p><a class="linkedin" href="https://www.linkedin.com/in/husna-zahidah-slawat-siregar-4462561b7/">LinkedIn</a></p>
+                </div>
+                <div class="jaysyu">
+                    <img class = "foto" src="/static/img_check/foto_jaysyu.jpeg" width="100px" height="100px"/>
+                    <p>Jaysyu Muhammad<br/><p class = "job">Data Engineer</p><a class="linkedin" href="https://www.linkedin.com/in/jaysyu-muhammad-04817021b/">LinkedIn</a></p>
+                </div>
+                <div class="rafly">
+                    <img src="/static/img_check/foto rafly.jpeg" class="foto" width="100px" height="100px">
+                    <p>M. Rafly Fauzi<br/><p class = "job">Backend Engineer</p><a class="linkedin" href="https://www.linkedin.com/in/muhammad-rafly-fauzi-293255220/">LinkedIn</a></p>
+                </div>
+                <div class="evelyn">
+                    <img src="/static/img_check/foto evelyn.jpeg" class="foto" width="100px" height="100px">
+                    <p>Evelyn Vanessa Umping<br/><p class = "job">UI/UX Designer</p><a class="linkedin" href="https://www.linkedin.com/in/evelyn-vanessa-umping/">LinkedIn</a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

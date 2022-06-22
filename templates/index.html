@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Freact</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='stylesheet.css')}}" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <meta charset="UTF-8" />
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          margin: 0;
+        }
+        
+        h1 {
+          color: rgb(233, 150, 50);
+          /*color: rgb(245, 159, 54);*/
+          font-family: Coolvetica, Helvetica, sans-serif;
+        }
+        
+        h4 {
+          margin-top: 90px;
+          margin-bottom: 0;
+          font-family: Courier, Helvetica, sans-serif;
+          letter-spacing: 5px;
+        }
+        
+        .about {
+          font-family: Bebas Neue, Helvetica, sans-serif;
+          letter-spacing: 2px;
+          color: white;
+          margin-top: 0px;
+          padding-top: 0px;
+          /* margin-top: 100px;
+          padding-top: 50px; */
+          font-size: 40px;
+          text-align: center;
+        }
+        
+        .bold {
+          font-weight: bolder;
+        }
+        
+        .category p {
+          color: white;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          font-family: Courier, Helvetica, sans-serif;
+        }
+        
+        .category a {
+          color: white;
+          margin-bottom: 20px;
+          margin-bottom: 100px;
+          margin-top: 50px;
+          font-family: Courier, Helvetica, sans-serif;
+        }
+        
+        .header {
+          height: 100px;
+          width: 100%;
+          background-color : rgb(0, 65, 130);
+          /*background-color: rgba(4, 71, 66, 0.9);*/
+          position: fixed;
+          top: 0;
+          opacity: 0.9;
+          z-index: 10;
+        }
+        
+        .logo {
+          width: 50px;
+          margin-top: 25px;
+          margin-left: 25px;
+        }
+        
+        .container {
+          max-width: 1170px;
+          width: 100%;
+          padding: 0 15px;
+          margin: 0 auto;
+        }
+        
+        .start {
+          padding: 15px 30px;
+          display: inline-block;
+          /*background-color: rgba(41, 98, 109, 0.8);*/
+          background-color: rgb(245, 159, 54);
+          margin: 0 30% 0 30%;
+          border-radius: 10px;
+          color: white;
+          transition: all 0.5s;
+          font-family: Coolvetica, sans-serif;
+          letter-spacing: 4px;
+          text-decoration: none;
+          font-weight: normal;
+        }
+        
+        .start:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .start:active {
+          position: relative;
+          top: 7px;
+          box-shadow: none;
+        }
+        
+        .container p {
+          text-align: center;
+        }
+        .container h5{
+          padding-bottom: 40px;
+        }
+        
+        .header-left {
+          width: 50%;
+          float: left;
+        }
+        
+        .desc {
+          text-align: center;
+          margin: 0% 10%;
+          padding: 12px 24px;
+          /* font-family: Courier, sans-serif; */
+          font-family:  "Courier New", monospace;
+          letter-spacing: 3px;
+        }
+        
+        .header-right {
+          float: right;
+          margin-right: 25px;
+          margin-top: 15px;
+          font-family: Bebas Neue, Helvetica, sans-serif;
+          letter-spacing: 2px;
+          font-style: normal;
+        }
+        
+        .header-right a {
+          line-height: 8px;
+          padding: 20px;
+          margin-top: 7px;
+          margin-right: 10px;
+          background-color : rgb(0, 65, 130);
+          /*background-color: rgba(4, 71, 66, 0.9);
+            background-color: rgb(245, 159, 54) */
+          color: white;
+          display: block;
+          float: left;
+          transition: all 0.5s;
+          border-radius: 15px;
+          text-decoration: none;
+        }
+        
+        .header-right a:hover {
+          /*background-color: rgba(251, 203, 142);*/
+          /* background-color: rgb(247, 215, 22); */
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .top-wrapper {
+          background-image: url('/static/img/latar2.jpg');
+          background-size: cover;
+          padding: 180px 0px 270px 0px;
+          text-align: center;
+          color: rgb(248, 246, 246);
+          /*background-color: rgb(17, 141, 240);
+          background-color: rgb(41, 98, 109);*/
+          opacity: 1;
+        }
+        
+        .top-wrapper h1 {
+          margin-top: 0px;
+          margin-bottom: 20px;
+          opacity: 0.9;
+          font-size: 70px;
+          letter-spacing: 4px;
+        }
+        
+        .top-wrapper h2 {
+          opacity: 0.9;
+          margin-bottom: 5px;
+        }
+        
+        .content-wrapper {
+          padding: 180px 5% 335px 5%;
+          /*padding-bottom: 345px;
+          padding-left: 5%;
+          padding-right: 5%;*/
+          text-align: center;
+          background-color : rgb(0, 65, 130);
+          background-image: linear-gradient(to top,rgb(0, 65, 130),grey);
+          opacity: 1;
+        }
+        .batas{
+          background-color:white;
+          padding-top: 0.5px;
+          padding-bottom: 0.5px;
+          width:100%;
+          text-align: center;
+        }
+        .batas p{
+          color:rgb(197, 128, 43);
+          font-size: 15pt;
+          font-family:Georgia, 'Times New Roman', Times, serif;
+          word-spacing:8px;
+          letter-spacing: 8px;
+        }
+        .FAQ_cont .about{
+          margin-top:-30px;
+        }
+        .FAQ_cont{
+          background-size: cover;
+          padding: 150px 0px 185px 0px;
+          text-align: left;
+          color: rgb(248, 246, 246);
+          background-color : rgb(0, 65, 130);
+          background-image: linear-gradient(to bottom,rgb(0, 65, 130),grey);
+          opacity: 1;
+        }
+        .FAQ_cont h3{
+          padding-top: 5px;
+          margin-bottom: -10px;
+        }
+        .FAQ_cont h5{
+          padding: all 0;
+        }
+        footer {
+          padding-top : 20px;
+          padding-bottom: 10px;
+          text-align: center;
+          background-color: white;
+        } 
+        footer img {
+          width: 75px;
+        }
+        footer p {
+          font-size: 12px;
+          color: black;
+          /* color: rgba(25
+          5, 255, 255, 0.3); */
+        }
+        .search{
+          display:inline-flex;
+          float:right;
+          transition-timing-function: 0.5s;
+          transition-delay: 0.5s;
+          transition-duration: 0.5s;
+        }
+        .search:hover{
+          -webkit-transform: scaleX(-1);
+          transform:scaleX(-1);
+        }
+        .log-search{
+          margin-left: 200px;
+        }
+        .categories{
+          display:inline-flex;
+          float:left;
+        }
+        .konten-tengah{
+          display:flex;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <img class="logo" src="/static/img/logo.PNG" width="50px" height="50px"/>
+      </div>
+      <div class="header-right">
+        <a href="#" class="Home">Home</a>
+        <a href="#" class="ContactUs" onclick="window.location.href='/contact_us';">Contact Us</a>
+        <a href="#about" class="AboutUs" id="AboutUs">About</a>
+        <a href="#FAQ" class="FAQ">FAQ</a>
+      </div>
+    </div>
+
+    <div id="app"></div>
+
+    <div class="top-wrapper">
+      <div class="container">
+        <h4>FACE FORGERY DETECTION</h4>
+        <h1>Freact</h1>
+
+        <a href="#" class="start" onclick="window.location.href='/freact';">START</a>
+        
+      </div>
+    </div>
+    <div class="content-wrapper" id="about">
+      <div class="container" >
+        <div class="heading"></div>
+        <div class="konten-tengah">
+          <div class="categories">
+
+            <div class="category">
+              <h3 class="about" >About</h3>
+              <div class="desc">
+                <a>
+                  Freact is a web-based face forgery detection application to avoid all acts of fraud using digital face image.
+                </a>
+              </div>
+              
+              <a href="#" class="btn"></a>
+            </div>
+          </div>
+          <div class="search">
+            <img class="log-search" src="/static/img/search.png" width="300px" height="300px" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="batas">
+      <p><b>Be Real . Be Original . Be Authentic</b></p>
+    </div>
+    <div class="FAQ_cont" id="FAQ">
+      <h3 class="about">
+        FAQ
+      </h3>
+      <div class="container">
+        <h3>
+          How this application work?
+        </h3>
+        <h5>This application system works using the Convolutional Neural Network (CNN) algorithm.</h5>
+        <h3>
+          What was the main idea of making this application?
+        </h3>
+        <h5>Many concerns arise due to the large number of digital image editing applications.</h5>
+        <h3>
+          Is this app paid?
+        </h3>
+        <h5>No, It's free.</h5>
+        <h3>
+          What is the function of confidence score?
+        </h3>
+        <h5>Used to show the confidence level of the predicted result.</h5>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <img src="/static/img/logo.PNG">
+    <p>Design and Developed by Freact Group</p>
+  </footer>
+  </html>

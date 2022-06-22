@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <title>Freact</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel='stylesheet'>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            .judul h1{
+                margin-top: 0px;
+                margin-bottom: 10px;
+                opacity: 0.9;
+                font-size: 50px;
+                letter-spacing: 4px;
+                color: rgb(245, 159, 54);
+            }        
+            .judul{
+                padding-top: 20px;
+                padding-bottom: 10px;
+                background-color : rgb(0, 65, 130);
+            }
+            .konten{
+                background-color: rgb(17, 141, 240);
+                padding: 275px;
+            }
+            .image{
+                margin-top: -190px;
+                margin-left: -100px;
+                background-color: white;
+                display: block;
+                border-radius: 15px;
+                padding: 8px;
+                float:left
+            }
+            .button{
+            margin-top: 2%;
+            }
+            .btn-pilih{
+                display: flex;
+                padding: 20px;
+                justify-content: center;
+                background-color: rgb(245, 146, 54);
+                color: white;
+                border: none;
+                box-shadow: 0px 2px 3px grey;
+                border-radius: 10px;
+                cursor: pointer;
+                margin-left: 35%;
+                width:120px;
+                float: left;
+            }
+            .btn-pilih:active{
+                background-color: rgba(170, 155, 155, 0.479);
+            }
+            .btn-klasifikasi{
+                display: none;
+                padding: 20px;
+                float:left;
+                justify-content: center;
+                background-color: rgb(245, 146, 54);
+                color: white;
+                border: none;
+                box-shadow: 0px 2px 3px grey;
+                border-radius: 10px;
+                cursor: pointer;
+                margin-top: -70px;
+                margin-left: 35%;
+                width:120px;
+            }
+            .btn-klasifikasi:active{
+                background-color: rgba(170, 155, 155, 0.479);
+            }
+                
+            .btn{
+                float: right;
+                padding: 15px 30px;
+                /*background-color: rgba(41, 98, 109, 0.8);*/
+                background-color: rgb(245, 146, 54);
+                margin-right:50px;
+                margin-top: -50px;
+                border-radius: 10px;
+                color: white;
+                transition: all 0.5s;
+                font-family: Coolvetica, sans-serif;
+                letter-spacing: 4px;
+                text-decoration: none;
+                font-weight: normal;
+            }
+            .tes{
+                color: white;
+                float: left;
+                margin-top: -120px;
+            }
+            .prob{
+                color: white;
+                float: left;
+                margin-top: -90px;
+            }
+            .output{
+                padding-left: 50px;
+                display:inline-block;
+                text-align: center;
+            }
+            p{
+                background-color: rgb(17, 141, 240);
+                color: white;
+            }
+            .kiri{
+                width:30%;
+                float:left;
+            }
+            .home{
+                margin-left: 20px;
+                cursor: pointer;
+            }
+            .tit{
+                margin-left:560px;
+                font-family: Coolvetica, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="judul">
+            <div class="kiri">
+                <img class="home" src="/static/img/home (2).png" width="50px" height="50px" onclick="window.location.href='/';"/>
+            </div>
+            <div class="title">
+                <h1 class = "tit">Freact</h1>
+            </div>
+        </div>
+        {% block content %}
+        <form method="post" action="/freact" enctype="multipart/form-data">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for msg in messages %}
+                        <center><p>{{msg}}</p></center>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <div class="konten">
+                <div class="image">
+                    {% if uploaded_image %}
+                    <img src = "{{url_for('static',filename = uploaded_image)}}" width="400px" height="400px"/>
+                    {% else %}
+                    <img src="{{url_for('static',filename = 'img/picture.png')}}" id="gambar" alt="gambar error" width="400px" height="400px">
+                    {% endif %}
+                </div>       
+                <div class="output">
+                    <div class="tes">
+                        Prediction :
+                    {% if prediksi %}
+                        {{prediksi}}
+                    {% endif %}
+                    </div>
+                    <div class="prob">
+                        Confidence Score :
+                    {% if prob %}
+                        {{prob}}
+                    {% endif %}
+                    </div>
+                </div>
+                <div class="button">
+                    <input type = 'submit' id = 'btn-klasifikasi' class="btn-klasifikasi" value="Detect">
+                    <input type="file" id="file" accept="image/*" style="display: none;" name="image_input">       
+                    <button type="button" id = btn-pilih class="btn-pilih">
+                        <span class="cont-btn">Choose An Image</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+        {% endblock %}
+        <script type="text/javascript">
+            var btn = document.getElementById('btn-pilih');
+            var img = document.getElementById('file');
+            btn.addEventListener('click',function(){
+                img.click();
+            })
+            img.addEventListener('change',function(){
+                gambar(this);
+                showBtn(this);
+            })
+            function gambar(a){
+                var reader = new FileReader();
+                reader.onload = function(e){
+                    document.getElementById('gambar').src=e.target.result;
+                }
+                reader.readAsDataURL(a.files[0]);                            
+            }
+            function showBtn(c){
+                document.querySelector('.btn-klasifikasi').style.display = 'block';
+                c.preventDefault();
+            }
+        </script>
+    </body>
+</html>

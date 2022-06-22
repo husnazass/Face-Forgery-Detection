@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  h1 {
+    color: rgb(236, 155, 59);
+    /*color: rgb(245, 159, 54);*/
+    font-family: Coolvetica, Helvetica, sans-serif;
+  }
+  
+  h4 {
+    margin-top: 90px;
+    margin-bottom: 0;
+    font-family: Courier, Helvetica, sans-serif;
+    letter-spacing: 5px;
+  }
+  
+  .topografi {
+    font-family: Bebas Neue, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    margin-top: 0px;
+    padding-top: 50px;
+    /* margin-top: 100px;
+    padding-top: 50px; */
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .bold {
+    font-weight: bolder;
+  }
+  
+  .category p {
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: Courier, Helvetica, sans-serif;
+  }
+  
+  .category a {
+    color: white;
+    margin-bottom: 20px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    font-family: Courier, Helvetica, sans-serif;
+  }
+  
+  .header {
+    height: 85px;
+    width: 100%;
+    background-color : rgb(0, 65, 130);
+    /*background-color: rgba(4, 71, 66, 0.9);*/
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logo {
+    width: 75px;
+    margin-top: 5px;
+    margin-left: 25px;
+  }
+  
+  .container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  
+  .start {
+    padding: 15px 30px;
+    display: inline-block;
+    /*background-color: rgba(41, 98, 109, 0.8);*/
+    background-color: rgb(245, 159, 54);
+    margin: 0 30% 0 30%;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.5s;
+    font-family: Coolvetica, sans-serif;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-weight: normal;
+  }
+  
+  .start:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .start:active {
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+  }
+  
+  .container p {
+    text-align: center;
+  }
+  
+  .header-left {
+    width: 50%;
+    float: left;
+  }
+  
+  .desc {
+    text-align: center;
+    margin: 0% 10%;
+    padding: 12px 24px;
+    /* font-family: Courier, sans-serif; */
+    font-family:  "Courier New", monospace;
+    letter-spacing: 3px;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  .header-right {
+    float: right;
+    margin-right: 25px;
+    margin-top: 10px;
+    font-family: Bebas Neue, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    font-style: normal;
+  }
+  
+  .header-right a {
+    line-height: 8px;
+    padding: 20px;
+    margin-top: 7px;
+    margin-right: 10px;
+    background-color : rgb(0, 65, 130);
+    /*background-color: rgba(4, 71, 66, 0.9);
+      background-color: rgb(245, 159, 54) */
+    color: white;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+    border-radius: 15px;
+    text-decoration: none;
+  }
+  
+  .header-right a:hover {
+    /*background-color: rgba(251, 203, 142);*/
+    /* background-color: rgb(247, 215, 22); */
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .top-wrapper {
+    background-image: url();
+    background-size: cover;
+    padding: 180px 0px 100px 0px;
+    text-align: center;
+    color: rgb(248, 246, 246);
+    background-color: rgb(17, 141, 240);
+    /*background-color: rgb(41, 98, 109);*/
+    opacity: 1;
+  }
+  
+  .top-wrapper h1 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+    font-size: 50px;
+    letter-spacing: 4px;
+  }
+  
+  .top-wrapper h2 {
+    opacity: 0.9;
+    margin-bottom: 5px;
+  }
+  
+  .content-wrapper {
+    padding-bottom: 80px;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    background-color : rgb(0, 65, 130);
+    background-image: url();
+    background-size: cover;
+  }
+  
+  iframe {
+    display: inline-block;
+    padding: 40px;
+  }
+  
+  footer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  
+  footer img {
+    width: 125px;
+  }
+  
+  footer p {
+    font-size: 12px;
+  }
+  
+  
+  .category p {
+    text-align: justify;
+    margin-left: 10px;
+    margin-top: 0;
+    width: 45%;
+    float: right;
+  }
+  
+  .support {
+    margin-top: 0px;
+    width: 100%;
+    margin-right: 10px;
+  }
+  
