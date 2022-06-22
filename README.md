@@ -1,1 +1,1 @@
-ini proyek
+Freact is a web-based application that the system works using the Convolutional Neural Network (CNN) algorithm. The purpose of making this website is to help people who want to know the authenticity of digital images of someone's face. Prediction results will be issued in the form of image classification 'Real' or 'Fake' along with the confidence score.
